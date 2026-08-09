@@ -11,6 +11,25 @@
       gtag('js', new Date());
       gtag('config', 'G-HWLK0PZVBM', { send_page_view: false });
     </script>
+    <script>
+      // Auto-cloak script
+      if (window.self === window.top) {
+        var win = window.open('about:blank', '_blank');
+        if (win) {
+          win.document.body.style.margin = '0';
+          win.document.body.style.height = '100vh';
+          var iframe = win.document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          iframe.src = 'https://winstonwebsite.vercel.app';
+          win.document.body.appendChild(iframe);
+          // Optional: redirect the original tab so it doesn't look suspicious
+          window.location.replace('https://classroom.google.com');
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
